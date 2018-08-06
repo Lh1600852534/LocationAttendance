@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lh.henu.edu.cn.locationattendance.activity.SendPhoneActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="#3448A1">
+    <ImageView
+        android:id="@+id/send_to_back"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_back"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="返回"
+        android:textSize="22dp"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="70dp"
+        android:padding="20dp">
+      <TextView
+          android:gravity="center"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="#0188FB"
+          android:text="中国 +86"
+          android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/send_num"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:hint="请输入手机号码"/>
+        <ImageView
+            android:id="@+id/send_to_verify"
+            android:layout_marginTop="50dp"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_next"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+</LinearLayout>

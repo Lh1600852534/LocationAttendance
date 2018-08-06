@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lh.henu.edu.cn.locationattendance.sign.BaiduGroupPersonSignInResultActivity">
+    <RelativeLayout
+        android:id="@+id/change_titleHead"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/baidu_group_person_sign_in_result_back_imageview"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_back"/>
+        <Spinner
+            android:id="@+id/baidu_group_person_sign_in_result_time_spinner"
+            android:gravity="center_horizontal"
+            android:background="@color/white"
+            android:layout_toRightOf="@id/baidu_group_person_sign_in_result_back_imageview"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="300dp"
+            android:layout_height="35dp">
+        </Spinner>
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/baidu_group_person_sign_in_result_map_mapview"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.baidu.mapapi.map.MapView>
+
+
+</LinearLayout>

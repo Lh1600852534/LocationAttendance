@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="lh.henu.edu.cn.locationattendance">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".util.LocationAttendanceApp"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="yOIBkGlzfCuQivlWCfZAAY4YaRB8X7PU" />
+
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.JoinGroupActivity" />
+        <activity android:name=".sign.IndexSignInActivity" />
+        <activity android:name=".activity.SendPhoneActivity" />
+        <activity android:name=".activity.VerifyCodeActivity" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 通过AndroidManifest配置AppKey和AppSecret，如果你选择通过代码配置，则不需要配置以下meta-data -->
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="21380b843a2b0" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="f8b81745732e6ed758dc15ddb395aa1b" />
+
+        <activity android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+        />
+        <activity android:name="com.tencent.tauth.AuthActivity"/>
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.GroupInfoActivity" />
+        <activity android:name=".activity.ResetActivity" />
+        <activity android:name=".activity.ChangedGroupInfoActivity" />
+        <activity android:name=".activity.MakeGroupActivity" />
+        <activity android:name=".activity.DealNewsJoinGroupActivity" />
+        <activity android:name=".activity.JoinGroupResultActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".sign.StartSignInActivity" />
+        <activity android:name=".sign.ClientSignInActivity" />
+
+        <service
+            android:name=".sign.ReceiveMessageService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+
+
+        <receiver
+            android:name=".net.NetReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".sign.GroupPersonSignInResultActivity" />
+        <activity android:name=".sign.BaiduGroupPersonSignInResultActivity" />
+        <activity android:name=".sign.BaiduPersonSignInResultActivity"/>
+    </application>
+
+</manifest>

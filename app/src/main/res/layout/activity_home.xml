@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lh.henu.edu.cn.locationattendance.activity.HomeActivity">
+    <FrameLayout
+        android:id="@+id/home_container_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray"
+        />
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/home_tabs_bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.ashokvarma.bottomnavigation.BottomNavigationBar>
+</LinearLayout>

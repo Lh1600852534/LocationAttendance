@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_recycler_view_news_fragment_head_imageview"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_toolbar_face"/>
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_recycler_view_news_fragment_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="标题"/>
+            <TextView
+                android:id="@+id/item_recycler_view_news_fragment_content_textview"
+                android:layout_below="@id/item_recycler_view_news_fragment_title_textview"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="内容"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="14dp"/>
+            <Button
+                android:id="@+id/item_recycler_view_news_fragment_delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="删除"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:background="@android:color/holo_red_light"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray"
+        />
+</LinearLayout>
